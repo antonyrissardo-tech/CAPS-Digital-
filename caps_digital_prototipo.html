@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#073b83">
+<title>CAPS Digital | Cuidado psicossocial</title>
+<style>
+:root{--blue:#0755b8;--navy:#082b61;--green:#168b45;--yellow:#ffca28;--pale:#eef5ff;--ink:#10264b;--muted:#52627a;--line:#d7e2f1;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.5}
+a{color:inherit}button,input,select,textarea{font:inherit}.topline{height:6px;background:linear-gradient(90deg,#168b45 0 33%,#ffca28 33% 66%,#0755b8 66%)}
+header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 12px #092b6110}
+.nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:13px 24px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;color:var(--navy);font-size:24px;line-height:1}
+.brandmark{width:43px;height:43px;border:3px solid var(--green);border-right-color:var(--yellow);border-bottom-color:var(--blue);border-radius:50%;display:grid;place-items:center;font-size:24px;color:var(--blue)}
+.brand small{display:block;font-size:11px;font-weight:500;margin-top:5px;color:var(--muted)}
+nav{display:flex;align-items:center;gap:22px}nav a{text-decoration:none;font-size:14px;font-weight:700;color:#203858}nav a:hover{color:var(--blue)}
+.btn{border:0;border-radius:28px;padding:12px 20px;background:var(--blue);color:white;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.2s}
+.btn:hover{background:var(--navy);transform:translateY(-1px)}.btn.outline{background:transparent;color:var(--blue);border:1.5px solid var(--blue)}.btn.green{background:var(--green)}
+.menu{display:none;background:none;border:0;font-size:26px;color:var(--navy);cursor:pointer}
+main{max-width:1200px;margin:auto;padding:0 24px}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:30px;padding:58px 16px 48px;min-height:390px}
+.eyebrow{color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:1.2px;font-size:12px}
+h1{font-size:clamp(42px,6vw,68px);line-height:1.02;margin:10px 0;color:var(--navy);letter-spacing:-2px}
+.hero h2{font-size:clamp(22px,3vw,31px);line-height:1.2;margin:0 0 18px}.hero h2 span{color:var(--blue)}
+.hero p{max-width:580px;color:#354968;font-size:16px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.illustration{min-height:285px;border-radius:48% 45% 35% 40%;background:radial-gradient(circle at 50% 35%,#fff 0 16%,transparent 17%),linear-gradient(135deg,#e8f3ff,#d8f0e3 65%,#fff4c9);display:grid;place-items:center;position:relative;overflow:hidden}
+.head-art{font-size:135px;filter:drop-shadow(0 8px 6px #12345a22);color:#2466b8}.heart{position:absolute;font-size:54px;color:var(--green);top:40px;right:22%}.quote{position:absolute;bottom:22px;right:20px;background:#fff;padding:13px 17px;border-radius:18px;max-width:205px;box-shadow:0 8px 25px #173b6515;font-weight:700;color:var(--navy);font-size:14px}
+.section{padding:22px 0 34px}.section-head{margin-bottom:18px}.section-head h2{font-size:30px;color:var(--navy);margin:0 0 4px}.section-head p{margin:0;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.service{border:1px solid var(--line);border-radius:18px;padding:20px 17px;background:white;box-shadow:0 5px 20px #0b37600a;display:flex;flex-direction:column;min-height:210px}
+.service-icon{width:55px;height:55px;border-radius:50%;display:grid;place-items:center;background:#e7f2ff;font-size:27px;margin-bottom:12px}.service:nth-child(2) .service-icon{background:#e4f4e9}.service:nth-child(3) .service-icon{background:#fff5d8}.service:nth-child(4) .service-icon{background:#ffeded}
+.service h3{font-size:17px;margin:0 0 7px;color:var(--navy)}.service p{font-size:14px;color:var(--muted);margin:0 0 15px}.service button{margin-top:auto;align-self:flex-start;border:0;background:none;color:var(--blue);font-weight:800;cursor:pointer;padding:0}
+.panels{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:12px 0 40px}.panel{border-radius:22px;padding:25px;background:#eaf2ff}.panel.greenbg{background:#e9f5e9}.panel h2{margin:0 0 10px;color:var(--navy);font-size:24px}.panel p{margin:0 0 14px;color:#344967}
+.help-links{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:18px}.help-links a{background:#fff;border-radius:14px;padding:14px;text-decoration:none;font-size:13px;font-weight:700;color:var(--navy);border:1px solid #e1e9f2}.help-links strong{display:block;font-size:19px;color:var(--blue);margin-top:4px}
+.notice{border-left:4px solid var(--yellow);padding:12px 15px;background:#fff9e5;border-radius:8px;color:#5a4915;font-size:14px;margin:15px 0}
+footer{background:var(--navy);color:white;padding:28px 24px}.foot{max-width:1150px;margin:auto;display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.foot a{color:white;text-decoration:none;font-size:13px;margin-right:16px}.foot small{color:#dbe7f8}
+dialog{border:0;border-radius:20px;padding:0;max-width:560px;width:calc(100% - 28px);box-shadow:0 20px 70px #071e3b55}dialog::backdrop{background:#071e3bcc}.modal{padding:27px}.modal h2{margin:0 0 10px;color:var(--navy)}.close{float:right;border:0;background:#edf3fa;border-radius:50%;width:34px;height:34px;font-size:20px;cursor:pointer}
+form{display:grid;gap:12px;margin-top:18px}label{font-weight:700;font-size:14px;color:#243b5d}input,select,textarea{width:100%;padding:12px;border:1px solid #bdcce0;border-radius:10px;background:white;color:var(--ink)}textarea{min-height:90px;resize:vertical}.form-note{font-size:12px;color:var(--muted)}.success{display:none;background:#e7f6eb;border:1px solid #a6d9b3;border-radius:12px;padding:14px;color:#145b2b;font-weight:700}
+@media(max-width:850px){nav{display:none;position:absolute;top:70px;left:0;right:0;background:#fff;padding:18px 24px;box-shadow:0 10px 20px #10264b20;flex-direction:column;align-items:flex-start}nav.open{display:flex}.menu{display:block}.nav>.btn{display:none}.hero{grid-template-columns:1fr;padding-top:38px}.illustration{min-height:220px}.cards{grid-template-columns:repeat(2,1fr)}.panels{grid-template-columns:1fr}}
+@media(max-width:520px){main{padding:0 16px}.nav{padding:12px 16px}.cards{grid-template-columns:1fr}.help-links{grid-template-columns:1fr}.hero{padding-left:2px;padding-right:2px}.hero h1{font-size:46px}.foot{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<header><div class="nav">
+<a class="brand" href="#inicio"><span class="brandmark">♡</span><span>CAPS Digital<small>Cuidado psicossocial, onde você estiver.</small></span></a>
+<button class="menu" id="menuBtn" aria-label="Abrir menu">☰</button>
+<nav id="navLinks"><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#projeto">Sobre o projeto</a><a href="#ajuda">Precisa de ajuda?</a><a href="#contato">Contato</a></nav>
+<button class="btn" data-open-form>Entrar / solicitar atendimento</button>
+</div></header>
+<main>
+<section class="hero" id="inicio">
+<div><div class="eyebrow">Acolhimento e cuidado em rede</div><h1>CAPS Digital</h1><h2>Um cuidado mais próximo,<br><span>em qualquer lugar.</span></h2>
+<p>Uma plataforma de cuidado psicossocial que amplia, em formato híbrido, os serviços oferecidos pelos Centros de Atenção Psicossocial. O digital complementa o presencial e fortalece a Rede de Atenção Psicossocial (RAPS).</p>
+<div class="hero-actions"><button class="btn" data-open-form>▣ Solicitar acolhimento →</button><a class="btn outline" href="#servicos">Conhecer os serviços</a></div></div>
+<div class="illustration" aria-label="Ilustração simbólica de cuidado e saúde mental"><div class="head-art">☻</div><div class="heart">♡</div><div class="quote">“O cuidado precisa encontrar a pessoa onde ela está.”</div></div>
+</section>
+<section class="section" id="servicos"><div class="section-head"><h2>Nossos serviços</h2><p>Possibilidades de cuidado psicológico em formato híbrido.</p></div>
+<div class="cards">
+<article class="service"><div class="service-icon">🤝</div><h3>Acolhimento inicial</h3><p>Um primeiro espaço de escuta para compreender a necessidade e orientar os próximos passos.</p><button data-service="acolhimento">Saiba mais →</button></article>
+<article class="service"><div class="service-icon">🛋️</div><h3>Acompanhamento psicoterapêutico</h3><p>Continuidade do cuidado com atendimentos online e presenciais, conforme avaliação da equipe.</p><button data-service="acompanhamento">Saiba mais →</button></article>
+<article class="service"><div class="service-icon">👥</div><h3>Grupos terapêuticos</h3><p>Espaços de troca, convivência e fortalecimento de vínculos com outras pessoas.</p><button data-service="grupos">Saiba mais →</button></article>
+<article class="service"><div class="service-icon">🆘</div><h3>Atenção à crise</h3><p>Orientações para buscar apoio adequado em momentos de sofrimento intenso.</p><button data-service="crise">Saiba mais →</button></article>
+</div></section>
+<section class="panels">
+<div class="panel" id="projeto"><h2>Sobre o projeto</h2><p>O CAPS Digital parte de um princípio simples: o sofrimento psíquico não respeita horário de funcionamento nem distância geográfica.</p><p>A proposta amplia as possibilidades de acesso e acompanhamento, sem substituir o atendimento presencial nem a lógica territorial da RAPS.</p><a class="btn outline" href="#servicos">Explorar os serviços →</a></div>
+<div class="panel greenbg" id="ajuda"><h2>Precisa de ajuda agora?</h2><p>Você não precisa enfrentar um momento difícil sem apoio. Procure a rede de saúde do seu território.</p>
+<div class="help-links"><a href="tel:188">CVV – apoio emocional<strong>188</strong><small>Atendimento gratuito</small></a><a href="https://www.cvv.org.br/" target="_blank" rel="noopener">Atendimento online<strong>cvv.org.br</strong><small>Chat e informações</small></a><a href="https://www.gov.br/saude/pt-br" target="_blank" rel="noopener">Rede pública de saúde<strong>Saiba mais</strong><small>Orientações do SUS</small></a></div>
+<div class="notice"><b>Em uma emergência ou risco imediato:</b> procure uma UPA/pronto-socorro ou ligue 192 (SAMU). O CVV oferece apoio emocional, mas não substitui serviços de emergência.</div></div>
+</section>
+<section class="section" id="contato"><div class="section-head"><h2>Fale com a equipe</h2><p>Este protótipo demonstra o fluxo de solicitação. Para atendimento real, procure o CAPS de referência do seu território.</p></div><button class="btn" data-open-form>Preencher solicitação de contato</button></section>
+</main>
+<footer><div class="foot"><div><b>♡ CAPS Digital</b><br><small>Cuidar também é estar presente, mesmo à distância.</small></div><div><a href="#projeto">Sobre</a><a href="#servicos">Serviços</a><a href="#ajuda">Ajuda</a><a href="#contato">Contato</a></div><small>Protótipo acadêmico demonstrativo · Não realiza atendimento clínico real.</small></div></footer>
+
+<dialog id="serviceDialog"><div class="modal"><button class="close" data-close aria-label="Fechar">×</button><h2 id="serviceTitle"></h2><p id="serviceText"></p><div class="notice" id="serviceNote"></div><button class="btn" data-open-form>Solicitar contato</button></div></dialog>
+<dialog id="formDialog"><div class="modal"><button class="close" data-close aria-label="Fechar">×</button><h2>Solicitar acolhimento</h2><p>Preencha os dados para simular um pedido de contato com a equipe.</p><div class="success" id="successMsg">Solicitação demonstrativa registrada nesta página. Nenhum dado foi enviado ou armazenado.</div>
+<form id="contactForm"><div><label for="nome">Nome</label><input id="nome" name="nome" required autocomplete="name" placeholder="Como podemos chamar você?"></div><div><label for="email">E-mail ou telefone</label><input id="email" name="contato" required placeholder="Seu meio de contato"></div><div><label for="tipo">Assunto</label><select id="tipo" required><option value="">Selecione uma opção</option><option>Acolhimento inicial</option><option>Acompanhamento psicoterapêutico</option><option>Grupos terapêuticos</option><option>Informações sobre a rede de atendimento</option></select></div><div><label for="mensagem">Mensagem (opcional)</label><textarea id="mensagem" placeholder="Conte brevemente como podemos orientar você. Evite inserir informações muito pessoais."></textarea></div><p class="form-note">Demonstração acadêmica: este formulário não envia informações para um serviço de saúde e não é monitorado.</p><button class="btn" type="submit">Enviar solicitação demonstrativa</button></form></div></dialog>
+<script>
+const formDialog=document.getElementById('formDialog'),serviceDialog=document.getElementById('serviceDialog');
+document.querySelectorAll('[data-open-form]').forEach(b=>b.addEventListener('click',()=>{serviceDialog.close();formDialog.showModal()}));
+document.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',()=>b.closest('dialog').close()));
+const details={
+acolhimento:['Acolhimento inicial','O acolhimento é um primeiro momento de escuta e orientação. A equipe do serviço de referência avalia junto com a pessoa quais caminhos de cuidado fazem sentido.','O contato digital não substitui a avaliação da equipe nem garante atendimento imediato.'],
+acompanhamento:['Acompanhamento psicoterapêutico','O acompanhamento pode combinar recursos digitais e encontros presenciais, conforme a necessidade da pessoa, a avaliação profissional e a organização do serviço.','A modalidade e a frequência são definidas com a equipe responsável.'],
+grupos:['Grupos terapêuticos','Os grupos promovem convivência, escuta, troca de experiências e fortalecimento de vínculos. A participação depende dos grupos disponíveis no território e da orientação da equipe.','Consulte o CAPS de referência para saber quais grupos estão disponíveis.'],
+crise:['Atenção à crise','Em situações de sofrimento intenso, é importante buscar apoio presencial na rede de saúde. A plataforma pode apresentar orientações, mas não monitora crises nem oferece resposta emergencial.','Em risco imediato, procure uma UPA/pronto-socorro ou ligue 192 (SAMU). Para apoio emocional, CVV 188.']
+};
+document.querySelectorAll('[data-service]').forEach(b=>b.addEventListener('click',()=>{const d=details[b.dataset.service];document.getElementById('serviceTitle').textContent=d[0];document.getElementById('serviceText').textContent=d[1];document.getElementById('serviceNote').textContent=d[2];serviceDialog.showModal()}));
+document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();if(!e.currentTarget.reportValidity())return;document.getElementById('successMsg').style.display='block';e.currentTarget.reset();});
+document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
+document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+</script>
+</body></html>
